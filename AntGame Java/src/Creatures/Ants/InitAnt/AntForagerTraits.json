@@ -1,0 +1,36 @@
+        {
+          "FormicaRufa": {
+            "roles": {
+              "Forager": {
+                "efficiencies": {
+                  "ScoutArea": 1.2,
+                  "MoveObject_Material_Raw": 0.9,
+                  "MoveObject_Ant": 0.8,
+                  "CollectResource_Food": 1.2
+                },
+                "traits": {
+                  "Venomous": 0.0,
+                  "Camouflage": 0.0
+                },
+                "skills": {
+                  "Navigation": 8,
+                  "Foraging": 9
+                },
+                "stats": {
+                  "Health": 120.0,
+                  "Speed": 1.3
+                },
+                "knowledge": {
+                  "Offensive": {
+                    "Flanking": 0,
+                    "Ambush": 0
+                  },
+                  "Defensive": {
+                    "Fortify": 0,
+                    "Shield_Wall": 0
+                  }
+                }
+              }
+            }
+          }
+        }

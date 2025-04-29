@@ -1,0 +1,16 @@
+Pathfinding
+    A*
+    use pathfinding to determine distance to tasks
+WorkingGroup
+    Assign idle ants to WorkingGroup
+    Store Tasks as nested Maps
+    assign tasks to ants
+        skill-based
+            Knowledge, experience, strengths/weaknesses
+        Use a prioritization method
+        randomization
+    Search for tasks if there are no tasks available or idle ants do not have moderate-high efficiency in available tasks
+    Create tasks based on available supplies
+DataVault
+    Create a class that dynamically updates data according to actions of individual ants.
+        alternatively, branch this off of workinggroup/combatgroup

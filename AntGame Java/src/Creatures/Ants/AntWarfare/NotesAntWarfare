@@ -1,0 +1,30 @@
+Pathfinding
+    Individual/Group
+    CombatTaskPriority
+CombatGroup
+    Role assignment
+        Skill-based
+        Increase experience in role
+            Time-based
+            Task Completion
+    Combat Detection
+        Place into nearby combatGroup on detect
+            Init new combatGroup if none found nearby
+        Weight Survival
+            Quantity
+            Quality (estimated)
+                different scaling for approximation based on unit type and species
+            terrain
+            Knowledge
+    Task List
+        Create priorities for units within combatGroup
+            Assign tasks with relation to caste, species, skill, location, and some randomness
+Pheromones
+     Fluid-based
+        Typically for trails and such
+        Create gases
+     Gas-based
+        Disperses faster, immediately gaseous
+     Territorial
+        Fluid-based almost always
+        May cause aggression in species not aligned with the pheromone.

@@ -1,0 +1,95 @@
+                    Efficiencies = new Dictionary<string, float>
+                    {
+                        { "ScoutArea", 1.2f },
+                        { "MoveObject_Material_Raw", 0.9f },
+                        { "MoveObject_Ant", 0.8f },
+                        { "MoveObject_Egg", 1.0f },
+                        { "MoveObject_Material_Refined", 0.9f },
+                        { "Patrol", 1.3f },
+                        { "Construct_Storage", 0.7f },
+                        { "Construct_Tunnel", 0.75f },
+                        { "Construct_Nest", 0.8f },
+                        { "Construct_Well", 0.85f },
+                        { "Construct_Entrance", 0.9f },
+                        { "Construct_Wall", 1.0f },
+                        { "Pillage", 1.4f },
+                        { "Harvest", 1.2f },
+                        { "CollectResource_Wood", 1.1f },
+                        { "CollectResource_Food", 1.2f },
+                        { "CollectResource_Dirt", 1.0f },
+                        { "CollectResource_Rock", 1.1f },
+                        { "CollectResource_Water", 1.2f },
+                        { "CollectResource_Spores", 0.8f },
+                        { "CollectResource_Leaves", 0.9f },
+                        { "CollectResource_Silk", 0.85f },
+                    },
+                    Traits = new Dictionary<string, int>
+                    {
+                        { "Venomous", 0.0f},
+                        { "Camouflage", 0.0f},
+                        { "Stinger", 0.0f},
+                        { "Extra_Mandibles", 0.0f},
+                        { "Poisonous", 0.0f},
+                        { "Spikes", 0.0f},
+                        { "Wings", 0.0f},
+                        { "Exoskeleton", 0.0f},
+                        { "Antennae", 0.0f},
+                        { "Eyes", 0.0f},
+                        { "Spitter", 0.0f}
+                    }
+                    Skills = new Dictionary<string, int>
+                    {
+                        { "Navigation", 8 },
+                        { "Foraging", 9 },
+                        { "Building", 6 },
+                        { "Tunneling", 7 },
+                        { "Guarding", 5 },
+                        { "Farming", 4 },
+                        { "Architect" , 3 },
+                        { "Diplomacy", 2 }
+                    },
+                    Stats = new Dictionary<string, float>
+                    {
+                        { "Health", 120f },
+                        { "Speed", 1.3f },
+                        { "Strength", 1.0f },
+                        { "Defense", 0.8f },
+                        { "Stamina", 1.2f },
+                        { "CarryCapacity", 30*1.2f },
+                        { "Aggressiveness ", 0.5f },
+                        { "Adaptability", 0.9f }
+                    },
+                    Knowledge = new Dictionary<string, Dictionary<string, int>>
+                    {
+                        { "Offensive", new Dictionary<string, int>
+                            {
+                                { "Flanking", 0 },
+                                { "Ambush", 0 },
+                                { "Charge", 0 }
+                            }
+                        },
+                        { "Defensive", new Dictionary<string, int>
+                            {
+                                { "Fortify", 0 },
+                                { "Shield_Wall", 0 },
+                                { "Retreat", 0 }
+                            }
+                        },
+                        { "Strategic", new Dictionary<string, int>
+                            {
+                                { "Reconnaissance", 0 },
+                                { "Diversion", 0 },
+                                { "Supply_Line", 0 }
+                            }
+                        }
+                    }
+                };
+        List<string> allAntTypes = new List<string> {
+            "Forager", "Soldier", "Queen", "Worker", "Scout", "Builder",
+            "Medics", "Swarmer", "Guardian", "Major", "Minor" };
+                    EfficiencyTree["FormicaRufa"] = new Dictionary<string, AntInfo>();  // Red Wood Ant
+                    EfficiencyTree["AttaCephalotes"] = new Dictionary<string, AntInfo>(); // Leaf Cutter Ant
+                    EfficiencyTree["CamponotusPennsylvanicus"] = new Dictionary<string, AntInfo>(); // Carpenter Ant
+                    EfficiencyTree["MyrmecocystusMexicanus"] = new Dictionary<string, AntInfo>(); // Honey Pot Ant
+                    EfficiencyTree["PolyrhachisDhofarensis"] = new Dictionary<string, AntInfo>(); // African Weaver Ant
+                    EfficiencyTree["LasiusNiger"] = new Dictionary<string, AntInfo>(); // Black Garden Ant
