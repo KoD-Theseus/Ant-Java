@@ -1,0 +1,57 @@
+package Structures;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * A specialized Building that holds resources.
+ */
+public class StorageBuilding extends Building {
+    private final Map<String,Integer> inventory = new HashMap<>();  // current stored amounts
+    private final int capacity;  // total slots available
+
+    public StorageBuilding(BuildingType type, SpriteManager spriteManager, int capacity) {
+        super(type, spriteManager);
+        this.capacity = capacity;
+    }
+
+    /**
+     * Try to store up to `amount` of `resource`.
+     * @return how many units were actually stored
+     */
+    public int storeResource(String resource, int amount) {
+        int used = inventory.values().stream().mapToInt(Integer::intValue).sum();
+        int free = capacity - used;
+        int toStore = Math.min(free, amount);
+        if (toStore <= 0) return 0;
+        inventory.merge(resource, toStore, Integer::sum);
+        return toStore;
+    }
+
+    /**
+     * Try to withdraw up to `amount` of `resource`.
+     * @return how many units were actually removed
+     */
+    public int withdrawResource(String resource, int amount) {
+        Integer have = inventory.getOrDefault(resource, 0);
+        int toGive = Math.min(have, amount);
+        if (toGive <= 0) return 0;
+        inventory.put(resource, have - toGive);
+        return toGive;
+    }
+
+    /** How many total units are stored? */
+    public int getUsedCapacity() {
+        return inventory.values().stream().mapToInt(Integer::intValue).sum();
+    }
+
+    /** How many free slots remain? */
+    public int getFreeCapacity() {
+        return capacity - getUsedCapacity();
+    }
+
+    /** Snapshot of stored resources for UI/debug. */
+    public Map<String,Integer> getInventorySnapshot() {
+        return new HashMap<>(inventory);
+    }
+}

@@ -1,7 +1,7 @@
 package Creatures.Ants.AntLabor;
 
 import java.util.List;
-import Creatures.Ants.Tasks.Task;
+import Creatures.Ants.AntLabor.Task;
 
 // Abstract class PrioritizationMethod with shared logic
 public abstract class PrioritizationMethod {

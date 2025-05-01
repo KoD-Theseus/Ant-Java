@@ -20,16 +20,16 @@ public class Building {
     private int currentCapacity = 0;       // Current usage
     private float constructionTime = 60f;  // Time in seconds to construct
     private int upgradeLevel = 0;          // Current upgrade level
-    
+
     private boolean isUnderConstruction = true;
     private float progress = 0f;           // Construction progress
     private int workersAssigned = 0;       // Number of workers currently assigned
-    
+
     // Dynamic Behavior
     private boolean dynamicGrowth = false; // For tunnels, farms, etc.
     private float growthRate = 0.05f;      // Growth rate per second
     private float width = 1f;              // For tunnels or building size
-    
+
     // Resource Management
     private Map<String, Integer> requiredResources = new HashMap<>(); // Key: Resource Name, Value: Quantity
 
@@ -99,9 +99,9 @@ public class Building {
 
         float tunnelWidth = width;
         return antX >= tunnelX - tunnelWidth / 2 &&
-               antX <= tunnelX + tunnelWidth / 2 &&
-               antY >= tunnelY - tunnelWidth / 2 &&
-               antY <= tunnelY + tunnelWidth / 2;
+                antX <= tunnelX + tunnelWidth / 2 &&
+                antY >= tunnelY - tunnelWidth / 2 &&
+                antY <= tunnelY + tunnelWidth / 2;
     }
 
     // Handles dynamic growth logic for tunnels or expandable structures
@@ -121,7 +121,7 @@ public class Building {
         if (isUnderConstruction) return;
 
         upgradeLevel++;
-        setSpriteState(upgradeLevel + 1); // Assuming sprite for each upgrade level follows construction sprites
+        spriteManager.setSprite(this, upgradeLevel + 1);// Assuming sprite for each upgrade level follows construction sprites
         System.out.println(type + " upgraded to level " + upgradeLevel + "!");
     }
 
@@ -142,3 +142,4 @@ public class Building {
         currentCapacity--;
         return true;
     }
+}

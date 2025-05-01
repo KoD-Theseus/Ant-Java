@@ -1,4 +1,4 @@
-package Creatures.Ants.InitAnt;
+/*package Creatures.Ants.InitAnt;
 
 public class Init {
     public static void main(String[] args) {
@@ -15,3 +15,4 @@ public class Init {
         }
     }
 }
+*/

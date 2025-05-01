@@ -26,6 +26,9 @@ public class LaborPathfind {
             return cost + heuristic;
         }
     }
+    public List<Node> findPath(float startX, float startY, int startFloor, double targetX, double targetY, int targetFloor) {
+        return findPath((int) startX, (int) startY, startFloor, (int) targetX, (int) targetY, targetFloor);
+    }
 
     /**
      * Finds the shortest path between a start and end position using A*.
@@ -93,7 +96,7 @@ public class LaborPathfind {
      * @param targetFloor Target floor level
      * @return Total distance as a float
      */
-    public float calculateDistance(int startX, int startY, int startFloor, int targetX, int targetY, int targetFloor) {
+    public float calculateDistance(float startX, float startY, int startFloor, double targetX, double targetY, int targetFloor) {
         List<Node> path = findPath(startX, startY, startFloor, targetX, targetY, targetFloor);
         if (path.isEmpty()) {
             return Float.MAX_VALUE; // Return a large value if path isn't found

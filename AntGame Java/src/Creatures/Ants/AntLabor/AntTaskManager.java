@@ -1,30 +1,10 @@
 package Creatures.Ants.AntLabor;
 
 import java.util.*;
+import Creatures.Ants.AntLabor.Ant;
 
 public class AntTaskManager {
     // Represents the position of an Ant in the grid
-    public static class Ant {
-        int x, y, floor;
-
-        public Ant(int x, int y, int floor) {
-            this.x = x;
-            this.y = y;
-            this.floor = floor;
-        }
-    }
-
-    // Represents the position of a Task in the grid
-    public static class Task {
-        int x, y, floor;
-
-        public Task(int x, int y, int floor) {
-            this.x = x;
-            this.y = y;
-            this.floor = floor;
-        }
-    }
-
     private final LaborPathfind pathfinder; // Instance of LaborPathfind for pathfinding operations
     private final Map<Ant, Map<Task, Float>> antTaskDistances; // Stores distances from each ant to each task
 
@@ -44,7 +24,7 @@ public class AntTaskManager {
             Map<Task, Float> taskDistances = new HashMap<>();
             for (Task task : tasks) {
                 float distance = pathfinder.calculateDistance(
-                        ant.x, ant.y, ant.floor, task.x, task.y, task.floor
+                        ant.getX(), ant.getY(), ant.getFloor(), task.getX(), task.getY(), task.getFloor()
                 );
                 taskDistances.put(task, distance);
             }
@@ -70,11 +50,11 @@ public class AntTaskManager {
             Ant ant = entry.getKey();
             Map<Task, Float> taskDistances = entry.getValue();
 
-            System.out.printf("Ant at (%d, %d, %d):\n", ant.x, ant.y, ant.floor);
+            System.out.printf("Ant at (%d, %d, %d):\n", ant.getX(), ant.getY(), ant.getFloor());
             for (Map.Entry<Task, Float> taskEntry : taskDistances.entrySet()) {
                 Task task = taskEntry.getKey();
                 float distance = taskEntry.getValue();
-                System.out.printf("  Task at (%d, %d, %d): Distance = %.2f\n", task.x, task.y, task.floor, distance);
+                System.out.printf("  Task at (%d, %d, %d): Distance = %.2f\n", task.getX(), task.getY(), task.getFloor(), distance);
             }
         }
     }

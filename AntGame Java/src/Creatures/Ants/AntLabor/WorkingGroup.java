@@ -1,7 +1,7 @@
 package Creatures.Ants.AntLabor;
 
 import java.util.*;
-
+/*
 public class WorkingGroup {
     private List<Ant> idleAnts; // List of idle ants to manage
     private Map<String, Map<String, Object>> tasks; // Nested key-value map to store tasks (taskType -> taskDetails)
@@ -80,4 +80,4 @@ public class WorkingGroup {
     }
 }
 
-//
+*/

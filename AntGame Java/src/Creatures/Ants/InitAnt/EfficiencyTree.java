@@ -1,4 +1,4 @@
-package Creatures.Ants.InitAnt;
+/*package Creatures.Ants.InitAnt;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,3 +28,4 @@ public class EfficiencyTree {
         return (targetSpecies != null) ? targetSpecies.getRoleInfo(role) : null;
     }
 }
+*/
